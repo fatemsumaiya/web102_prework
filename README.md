@@ -34,6 +34,7 @@ Here's a cool GIF of the website:
 ![Website Demo](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjRsdDlxbzhtdnoxZ2NoM2FrcTg0MjgwazMxa2tyOTZ6N3hydmhtMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pl16EKqpUbZoEayOOY/giphy.gif)
 
 
+GIF created through GIPHY! 
 
 Describe any challenges encountered while building the app.
 * I had a tough time understanding reduce in Javascript. It was a new concept and I was unfamiliar with how the synthax worked. With some trial and error, I was able to grasp what a useful feature it was
