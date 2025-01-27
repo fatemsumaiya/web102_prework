@@ -61,9 +61,7 @@ function addGamesToPage(games) {
                     </div>
                 <h1> Introducing ${games[i].name}</h1>
                 <p>description: ${games[i].description}</p>
-                <p>pledged: ${games[i].pledged} </p>
-                <p>goal: ${games[i].goal}</p>
-                    <h1>${i}</h1>
+                <p>pledged: ${games[i].pledged} <br>goal: ${games[i].goal}</p>
         `;
 
         // append the game to the games-container
@@ -203,7 +201,7 @@ We need your help to fund these incredible projects!
 
 // create a new DOM element containing the template string and append it to the description container
 const paragraphElement = document.createElement("p");
-paragraphElement.innerHTML = unfundedGamesMessage;
+paragraphElement.innerHTML = unfundedMessage;
 descriptionContainer.appendChild(paragraphElement);
 
 /************************************************************************************
@@ -219,7 +217,21 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [numOne, numTwo] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+// const numOneGame = document.createElement("p");
+// numOneGame.innerHTML = `Top Game: ${numOne.name}`;
+// firstGameContainer.appendChild(numOneGame);
+// // do the same for the runner up item
+// const numTwoGame = document.createElement("p");
+// numTwoGame.innerHTML = `Runner Up: ${numTwo.name}`;
+// secondGameContainer.appendChild(numTwoGame);
 
-// do the same for the runner up item
+const numOneGame = document.createElement("p");
+numOneGame.innerHTML = `${numOne.name}`;
+firstGameContainer.appendChild(numOneGame);
+
+const numTwoGame = document.createElement("p");
+numTwoGame.innerHTML = `${numTwo.name}`;
+secondGameContainer.appendChild(numTwoGame);
