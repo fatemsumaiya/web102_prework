@@ -10,6 +10,7 @@ import GAMES_DATA from './games.js';
 // create a list of objects to store the data about the games using JSON.parse
 const GAMES_JSON = JSON.parse(GAMES_DATA)
 
+
 // remove all child elements from a parent element in the DOM
 function deleteChildElements(parent) {
     while (parent.firstChild) {
@@ -26,15 +27,27 @@ function deleteChildElements(parent) {
 const gamesContainer = document.getElementById("games-container");
 
 // create a function that adds all data from the games array to the page
+/*
+Create a for loop within the addGamesToPage function that loops over each item in the argument games.
+You can expect that games will be an array of objects with the same structure as GAMES_JSON.
+*/
 function addGamesToPage(games) {
 
     // loop over each item in the data
-
-
+    for (let i = 0; i < games.length; i++) {
+        console.log(games[i]);
         // create a new div element, which will become the game card
+        /*
+        Within the loop you created, create a new div element which 
+        will become the game card that displays info
+        about a game. Add the class game-card to the div's class list.
+        */
+        //new div element
+        const gameCard = document.createElement("div");
 
 
         // add the class game-card to the list
+        gameCard.classList.add("game-card"); //adds a class to given element newDiv
 
 
         // set the inner HTML using a template literal to display some info 
@@ -42,12 +55,26 @@ function addGamesToPage(games) {
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
 
+        gameCard.innerHTML = `
+                <h1> Introducing ${games[i].name}</h1>
+                <p>description: ${games[i].description}</p>
+                <p>pledged: ${games[i].pledged} </p>
+                    <div class =  game-img>
+                    <img src="${games[i].img}" alt="${games[i].name}">
+
+                    </div>
+                    <h1>${i}</h1>
+        `;
 
         // append the game to the games-container
-
+        gamesContainer.appendChild(gameCard);
+    }
 }
 
 // call the function we just defined using the correct variable
+addGamesToPage(GAMES_JSON);
+
+
 // later, we'll call this function using a different list of games
 
 
