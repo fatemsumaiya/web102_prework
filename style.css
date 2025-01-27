@@ -48,6 +48,7 @@ body {
 #games-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     justify-content: space-around;
 }
 
@@ -64,12 +65,23 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+
+.game-card img {
+    width: 100%;  /* Ensures the image takes up the full width of the card */
+    height: auto; /* Keeps the image's aspect ratio intact */
+    border-radius: 5px; 
 }
 
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
 }
+
 
 #button-container {
     text-align: center;
