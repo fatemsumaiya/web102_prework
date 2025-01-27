@@ -41,10 +41,16 @@ h2 {
 
 }
 
+button:hover{
+    cursor: pointer;
+    background-color: lightblue;
+}
+
 .stats-container:hover {
     cursor: pointer; 
     box-shadow: 0 0 30px lightblue;
 }
+
 
 .stats-card {
     background-color: #a8b0bc;
